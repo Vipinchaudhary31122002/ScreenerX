@@ -75,8 +75,8 @@ function nextCV() {
   let image = document.getElementById("image");
   let profile = document.getElementById("profile");
 
-  if(CurrentCandidates != undefined){
-    image.innerHTML = `<img class= 'align-center 'src='${CurrentCandidates.image}'>`;
+  if (CurrentCandidates != undefined) {
+    image.innerHTML = `<img class= 'align-center img-fluid' src='${CurrentCandidates.image}'>`;
     profile.innerHTML = `<ul class="list-group">
     <li class="list-group-item">${CurrentCandidates.name} </li>
     <li class="list-group-item">${CurrentCandidates.age} years old</li>
@@ -84,9 +84,8 @@ function nextCV() {
     <li class="list-group-item">primarily works on ${CurrentCandidates.language} </li>
     <li class="list-group-item">uses ${CurrentCandidates.framework} framework</li>
   </ul>`;
-  }
-  else{
-    alert('End of Candidate Application');
+  } else {
+    alert("End of Candidate Application");
     window.location.reload();
   }
 }
